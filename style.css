@@ -24,6 +24,9 @@ body {
   color: var(--text);
   background: var(--white);
   overflow-x: hidden;
+  /* Fixes a known iOS/WebKit bug where overflow-x:hidden on body can cause
+     later sections to visually bleed into earlier ones on mobile. */
+  position: relative;
 }
 a { text-decoration: none; color: inherit; }
 
@@ -699,6 +702,8 @@ a { text-decoration: none; color: inherit; }
   background: var(--blue);
   color: white;
   padding: 24px 48px; /* ↓ antes 40px */
+  position: relative;
+  z-index: 1;
 }
 
 .footer-inner {
