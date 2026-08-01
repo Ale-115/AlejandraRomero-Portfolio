@@ -375,85 +375,6 @@ a { text-decoration: none; color: inherit; }
 
 
 
-/* ── CONNECT BANNER ── */
-.connect-section {
-  background: var(--light-bg);
-  padding: 96px 48px;
-  border-top: 1px solid rgba(0,0,0,0.08);
-}
-
-.connect-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 80px;
-}
-
-.connect-card-visual { flex: 1; }
-
-.connect-card-img {
-  object-fit: contain;
-  background: transparent;
-  width: 100%;
-  max-width: 420px;
-  border-radius: 16px;
-  transform: rotate(-3deg);
-  box-shadow: 0 20px 60px rgba(0,44,167,0.12);
-  transition: transform 0.4s ease;
-}
-.connect-card-img:hover { transform: rotate(0deg) scale(1.02); }
-
-.connect-text { flex-shrink: 0; }
-
-.connect-title {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  color: var(--purple);
-  margin-bottom: 16px;
-  font-weight: 800;
-}
-
-.connect-email {
-  font-size: 1rem;
-  color: var(--text);
-  border-bottom: 2px solid var(--purple);
-  padding-bottom: 2px;
-  transition: color 0.2s;
-}
-.connect-email:hover { color: var(--purple); }
-
-/* ── SOCIAL ICONS ── */
-.connect-socials {
-  display: flex;
-  gap: 16px;
-  margin-top: 24px;
-  align-items: center;
-}
-
-.social-icon-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--blue);
-  border: 2px solid var(--purple);
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.social-icon-link:hover {
-  background: var(--purple);
-  color: white;
-  transform: translateY(-3px);
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-}
-
 /* ── SECTION HEADER (title + description, two-column editorial layout) ── */
 .section-header {
   display: grid;
@@ -709,6 +630,89 @@ a { text-decoration: none; color: inherit; }
   color: var(--blue);
 }
 
+/* ---------- Process: How I Work ---------- */
+.process-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 96px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.process-desc {
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 24px;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.process-number {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: 0.05em;
+}
+
+.process-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 2px;
+}
+
+.process-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.process-ai {
+  display: inline-block;
+  width: fit-content;
+  background: var(--pink);
+  color: var(--blue);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+  margin-top: 4px;
+}
+
+.process-question {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--purple);
+  margin-top: 6px;
+}
+
+.process-note {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 760px;
+  margin-top: 36px;
+}
+
+@media (max-width: 900px) {
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 700px) {
   .about-hero {
     grid-template-columns: 1fr;
@@ -861,10 +865,8 @@ a { text-decoration: none; color: inherit; }
   }
 
   .branding-grid { grid-template-columns: repeat(3, 1fr); }
-  .connect-inner { flex-direction: column; gap: 40px; text-align: center; }
 
   .projects-section,
-  .connect-section,
   .additional-section,
   .branding-section { padding: 48px 24px; }
 
@@ -876,15 +878,4 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 600px) {
   .branding-grid { grid-template-columns: repeat(2, 1fr); }
   .footer { padding: 32px 24px; }
-}
-
-/* ── Business card override ── */
-.connect-card-img {
-  border-radius: 16px !important;
-  max-width: 280px !important;
-  transform: rotate(-3deg) !important;
-  box-shadow: 0 24px 64px rgba(0,44,167,0.2) !important;
-}
-.connect-card-img:hover {
-  transform: rotate(0deg) scale(1.02) !important;
 }
