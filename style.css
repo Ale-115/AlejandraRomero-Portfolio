@@ -92,7 +92,7 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 88px; left: 0; right: 0;
+  top: 114px; left: 0; right: 0;
   background: white;
   padding: 24px 48px;
   gap: 20px;
@@ -806,7 +806,7 @@ a { text-decoration: none; color: inherit; }
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .nav { padding: 12px 24px; }
-  .nav-logo { height: 64px; }
+  .nav-logo { height: 90px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
