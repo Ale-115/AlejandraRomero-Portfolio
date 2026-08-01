@@ -816,8 +816,29 @@ a { text-decoration: none; color: inherit; }
   .hero-subtitle-new { margin-left: auto; margin-right: auto; }
   .scroll-hint { justify-content: center; }
 
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .additional-grid { grid-template-columns: 1fr; gap: 48px; }
+  /* Work Experience + Projects: horizontal scroll on mobile instead of
+     stacking, with snap so cards land centered as you swipe. */
+  .projects-grid,
+  .additional-grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .projects-grid::-webkit-scrollbar,
+  .additional-grid::-webkit-scrollbar { display: none; }
+
+  .project-card,
+  .additional-card {
+    flex: 0 0 78%;
+    max-width: 320px;
+    scroll-snap-align: start;
+  }
+
   .branding-grid { grid-template-columns: repeat(3, 1fr); }
   .connect-inner { flex-direction: column; gap: 40px; text-align: center; }
 
@@ -832,7 +853,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 600px) {
-  .projects-grid { grid-template-columns: 1fr; }
   .branding-grid { grid-template-columns: repeat(2, 1fr); }
   .footer { padding: 32px 24px; }
 }
