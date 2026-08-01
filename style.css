@@ -268,6 +268,13 @@ a { text-decoration: none; color: inherit; }
   border-top: 1px solid rgba(0,0,0,0.08);
 }
 
+/* Swipe arrow hint for the mobile horizontal-scroll cards (Work
+   Experience, Projects) — hidden on desktop, shown and animated under
+   900px. */
+.swipe-arrow {
+  display: none;
+}
+
 .section-eyebrow {
   font-size: 1rem;
   color: var(--blue);
@@ -837,6 +844,20 @@ a { text-decoration: none; color: inherit; }
     flex: 0 0 78%;
     max-width: 320px;
     scroll-snap-align: start;
+  }
+
+  .swipe-arrow {
+    display: block;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--purple);
+    margin-bottom: 12px;
+    animation: swipeArrowMove 1.4s ease-in-out infinite;
+  }
+  @keyframes swipeArrowMove {
+    0%, 100% { transform: translateX(0); opacity: 0.55; }
+    50% { transform: translateX(10px); opacity: 1; }
   }
 
   .branding-grid { grid-template-columns: repeat(3, 1fr); }
