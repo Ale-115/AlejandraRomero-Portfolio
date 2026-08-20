@@ -1,0 +1,88 @@
+<svg viewBox="0 0 840 610" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Design Process &amp; Decision-Making Flowchart</title>
+  <desc>Five-step process — Discovery &amp; Brief (Notion + Claude for briefs and tasks), Concept &amp; Ideation (Midjourney + ChatGPT for moodboards and direction), Design &amp; Production (Midjourney + Canva AI for identity, content and packaging), Client Review &amp; Revisions, and Delivery &amp; Support (final files plus ongoing Shopify or Wix and social upkeep for select clients) — each with its key decision point. Most AI-accelerated stages: ideation and bilingual copywriting, where Midjourney, ChatGPT and Claude cut the time from brief to first concept, critical when running multiple client accounts at once.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8983ff"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="840" height="610" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text x="40" y="34" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#002ca7">How I Work — Process &amp; Decision-Making</text>
+  <text x="40" y="54" font-family="Arial, sans-serif" font-size="12" fill="#666">Purple italics = the decision at that step · pink pill = where AI tools come in</text>
+
+  <!-- Connectors -->
+  <line x1="260" y1="165" x2="298" y2="165" stroke="#8983ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="520" y1="165" x2="558" y2="165" stroke="#8983ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="670" y1="260" x2="670" y2="358" stroke="#8983ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="445" x2="524" y2="445" stroke="#8983ff" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Box 1: Discovery & Brief -->
+  <g>
+    <rect x="40" y="80" width="220" height="190" rx="16" fill="#f5f3ff" stroke="#eeecff" stroke-width="2"/>
+    <rect x="40" y="80" width="6" height="190" rx="3" fill="#002ca7"/>
+    <text x="58" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#002ca7">01 · Discovery &amp; Brief</text>
+    <text x="58" y="132" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Meet founders, define</text>
+    <text x="58" y="148" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">goals, audience &amp; scope</text>
+    <rect x="58" y="158" width="184" height="22" rx="11" fill="#f6c3a8"/>
+    <text x="150" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: Notion + Claude — briefs &amp; tasks</text>
+    <text x="58" y="234" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: What does this brand</text>
+    <text x="58" y="250" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">actually need?</text>
+  </g>
+
+  <!-- Box 2: Concept & Ideation -->
+  <g>
+    <rect x="300" y="80" width="220" height="190" rx="16" fill="#f5f3ff" stroke="#eeecff" stroke-width="2"/>
+    <rect x="300" y="80" width="6" height="190" rx="3" fill="#002ca7"/>
+    <text x="318" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#002ca7">02 · Concept &amp; Ideation</text>
+    <text x="318" y="132" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Explore direction through</text>
+    <text x="318" y="148" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">moodboards &amp; references</text>
+    <rect x="318" y="158" width="184" height="22" rx="11" fill="#f6c3a8"/>
+    <text x="410" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: Midjourney + ChatGPT</text>
+    <text x="318" y="234" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: Which direction fits</text>
+    <text x="318" y="250" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">the brand's voice?</text>
+  </g>
+
+  <!-- Box 3: Design & Production -->
+  <g>
+    <rect x="560" y="80" width="220" height="190" rx="16" fill="#f5f3ff" stroke="#eeecff" stroke-width="2"/>
+    <rect x="560" y="80" width="6" height="190" rx="3" fill="#002ca7"/>
+    <text x="578" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#002ca7">03 · Design &amp; Production</text>
+    <text x="578" y="132" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Build identity, content</text>
+    <text x="578" y="148" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">&amp; packaging assets</text>
+    <rect x="578" y="158" width="184" height="22" rx="11" fill="#f6c3a8"/>
+    <text x="670" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: Midjourney + Canva AI</text>
+    <text x="578" y="234" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: Consistent across every</text>
+    <text x="578" y="250" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">touchpoint?</text>
+  </g>
+
+  <!-- Box 4: Client Review & Revisions -->
+  <g>
+    <rect x="560" y="360" width="220" height="190" rx="16" fill="#f5f3ff" stroke="#eeecff" stroke-width="2"/>
+    <rect x="560" y="360" width="6" height="190" rx="3" fill="#002ca7"/>
+    <text x="578" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#002ca7">04 · Review &amp; Revisions</text>
+    <text x="578" y="412" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Present concepts to each</text>
+    <text x="578" y="428" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">client, run feedback rounds</text>
+    <text x="578" y="494" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: What feedback actually</text>
+    <text x="578" y="510" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">improves the work?</text>
+  </g>
+
+  <!-- Box 5: Delivery & Support -->
+  <g>
+    <rect x="300" y="360" width="220" height="190" rx="16" fill="#f5f3ff" stroke="#eeecff" stroke-width="2"/>
+    <rect x="300" y="360" width="6" height="190" rx="3" fill="#002ca7"/>
+    <text x="318" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#002ca7">05 · Delivery &amp; Support</text>
+    <text x="318" y="412" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Final files delivered, plus</text>
+    <text x="318" y="428" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Shopify/Wix &amp; social upkeep</text>
+    <text x="318" y="494" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: What does the client</text>
+    <text x="318" y="510" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">need to maintain this?</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="40" y="580" font-family="Arial, sans-serif" font-size="12" fill="#666">Most AI-accelerated: ideation &amp; bilingual copywriting — Midjourney, ChatGPT and Claude cut the time</text>
+  <text x="40" y="596" font-family="Arial, sans-serif" font-size="12" fill="#666">from brief to first concept, critical when running multiple client accounts at once.</text>
+
+</svg>

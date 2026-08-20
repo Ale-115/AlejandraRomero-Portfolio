@@ -1,0 +1,547 @@
+/* ===========================================================
+   All Aboard! Studio — Founder & Independent Designer
+   Page-specific styles only. Reuses tokens (--blue, --purple, --lilac,
+   --white, --light-bg, --text, --muted, --radius, --font) already
+   defined in style.css — load style.css BEFORE this file.
+   =========================================================== */
+
+.case-main { padding-top: 0; } /* .nav is static, no offset needed */
+
+h1, h2, h3 { color: var(--blue); }
+
+.text-purple { color: var(--purple); }
+
+/* ---------- Hero ---------- */
+.case-hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 40px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.back-link:hover { color: var(--purple); }
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+
+/* ---------- Hero: image + meta grid ---------- */
+.case-hero-top {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.case-hero-image {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  background: var(--light-bg);
+  border: 2px dashed var(--lilac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.case-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+/* Drop the placeholder padding/dashed border once a real image is in place,
+   so it fills the box edge to edge — same pattern as .media-item.media-filled. */
+.case-hero-image.hero-image-filled {
+  padding: 0;
+  border: none;
+}
+
+.case-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 36px;
+  margin: 0 0 32px;
+}
+
+.case-meta-item h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.case-meta-item p {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.case-title {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 24px;
+  color: var(--blue);
+}
+
+.case-title .text-purple { color: var(--blue); }
+
+.case-hero-sub {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.tag-group { margin-bottom: 20px; }
+
+.tag-label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tag {
+  background: var(--pink);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 99px;
+  transition: background 0.2s, color 0.2s;
+}
+.tag:hover { background: var(--purple); color: var(--white); }
+
+.tag-alt { background: var(--light-bg); color: var(--text); transition: background 0.2s, color 0.2s; }
+.tag-alt:hover { background: var(--pink-light); color: var(--text); }
+
+.behance-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+  border-bottom: 2px solid var(--purple);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.behance-link:hover { color: var(--purple); }
+
+/* ---------- Layout helpers ---------- */
+.case-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+/* Same divider used between sections on the home page. */
+.case-section {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.section-title {
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-intro { color: var(--muted); margin-bottom: 32px; }
+
+/* ---------- Overview ---------- */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.overview-item {
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.overview-wide { grid-column: 1 / -1; }
+
+.overview-item h3 { font-size: 16px; margin-bottom: 8px; }
+.overview-item p { color: var(--muted); margin: 0; line-height: 1.6; }
+
+/* ---------- Key Achievements ---------- */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.achievement-item {
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.achievement-item h3 { font-size: 1rem; margin-bottom: 8px; }
+.achievement-item p { color: var(--muted); margin: 0; line-height: 1.6; font-size: 0.92rem; }
+
+.achievement-highlight {
+  background: var(--pink-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievement-number {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--blue);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.decision-note {
+  background: var(--lilac);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.decision-note strong { color: var(--blue); }
+
+/* The "most AI-accelerated" note inside How I Worked gets the warm/pink
+   treatment instead of lilac — it's about workflow, not brand system. */
+.process .decision-note {
+  background: var(--pink-light);
+}
+.process .decision-note strong { color: #a5502a; }
+
+/* ---------- Design Process ---------- */
+.process-diagram {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+  border-radius: var(--radius);
+}
+
+.decision-list { display: flex; flex-direction: column; gap: 24px; }
+
+.decision-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  background: var(--white);
+  border: 1px solid var(--lilac);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.decision-number {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+.decision-item p { line-height: 1.6; }
+.decision-item > div > p:first-of-type { margin-top: 0; }
+.decision-item h3 { font-size: 16px; margin-bottom: 8px; }
+
+/* ---------- The Work ---------- */
+.work-block {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.work-block:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.work-block p { color: var(--muted); max-width: 640px; line-height: 1.6; margin-bottom: 12px; }
+
+/* Horizontal carousel — one large 16:9 slot visible at a time (sized for
+   1920x1080 source images/videos), advanced via the arrow button or the
+   dots below, drag/swipe still works. Drop in <img> or <video> (autoplay
+   muted loop playsinline) tags that fill the slot via object-fit. */
+.gallery-wrap { margin-top: 24px; }
+
+.gallery-viewport { position: relative; }
+
+.media-nav-next,
+.media-nav-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--lilac);
+  background: rgba(255,255,255,0.9);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.media-nav-next:hover,
+.media-nav-prev:hover { background: var(--white); border-color: var(--purple); }
+.media-nav-next svg,
+.media-nav-prev svg { width: 16px; height: 16px; stroke-width: 2; }
+
+.media-nav-next { right: 14px; }
+.media-nav-next:hover { transform: translateY(-50%) translateX(2px); }
+
+.media-nav-prev { left: 14px; }
+.media-nav-prev:hover { transform: translateY(-50%) translateX(-2px); }
+
+.media-gallery {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.media-gallery::-webkit-scrollbar { display: none; }
+
+.media-item {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  background: var(--light-bg);
+  border: 2px dashed var(--lilac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 2px);
+  display: block;
+}
+
+/* Once a slot holds real media, drop the dashed placeholder framing so the
+   image/video fills the slide edge to edge. Add this class alongside
+   .media-item whenever you replace a placeholder with an <img>/<video>. */
+.media-item.media-filled {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+/* Hide any gallery slot that hasn't been filled with real media yet, so an
+   incomplete gallery never shows a "coming soon" placeholder on the live
+   site — it only shows the slots that already have media in them. The
+   matching JS carousel logic (see all-aboard-studio-case-study.js) only
+   counts .media-filled items too, so the dots/arrows stay in sync. */
+.media-item:not(.media-filled) {
+  display: none;
+}
+
+.media-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.media-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--lilac);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.media-dot:hover { background: var(--purple); }
+.media-dot.active { background: var(--purple); transform: scale(1.3); }
+
+/* ---------- Featured Clients ---------- */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.client-card {
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.client-card-image {
+  aspect-ratio: 4 / 3;
+  background: var(--white);
+  border-bottom: 2px dashed var(--lilac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.client-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-card-info { padding: 20px; }
+
+.client-name { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+
+.client-industry {
+  font-size: 12px;
+  color: var(--purple);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.client-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.client-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.client-tag {
+  background: var(--white);
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.client-grid-note {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.client-name a { color: var(--blue); transition: color 0.2s; }
+.client-name a:hover { color: var(--purple); }
+
+.client-case-link {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  transition: color 0.2s;
+}
+.client-case-link:hover { color: var(--purple); }
+
+/* ---------- Results ---------- */
+.results-card {
+  background: var(--blue);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 48px;
+  text-align: center;
+}
+
+.results-card .section-title { color: var(--white); }
+.results-card p {
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---------- CTA ---------- */
+.cta { text-align: center; padding-bottom: 96px; }
+.cta .section-title { text-align: center; }
+.cta p { color: var(--muted); margin-bottom: 28px; }
+
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.hero-cta-alt {
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.hero-cta-alt:hover { background: var(--blue); color: var(--white); }
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .achievement-grid { grid-template-columns: repeat(2, 1fr); }
+  .overview-grid { grid-template-columns: 1fr; }
+  .case-hero-top { grid-template-columns: 1fr; }
+  .case-hero-image { max-width: 280px; margin: 0 auto; }
+  .client-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .achievement-grid { grid-template-columns: 1fr; }
+  .media-nav-next, .media-nav-prev { width: 38px; height: 38px; }
+  .decision-item { grid-template-columns: 1fr; }
+  .case-section { padding: 40px 20px; }
+  .case-hero { padding: 32px 20px 32px; }
+  .results-card { padding: 32px 24px; }
+  .case-meta-grid { grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+  .client-grid { grid-template-columns: 1fr; }
+}
