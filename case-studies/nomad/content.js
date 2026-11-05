@@ -16,6 +16,7 @@ window.CASE_STUDY = {
     tools: ['Figma'],
     award: { label: 'Award · LCI Education Recognition', href: '#outcome' },
     app: {
+      poster: 'assets/prototype-poster.webp',
       url: 'https://www.figma.com/proto/9Bgm6k27svCAy02yWFAhkw/NO%CC%81MADAS-DIGITALES?node-id=841-4419&p=f&t=ROxu9ElON7Truu3l-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=841%3A4419&page-id=0%3A1',
       title: 'Nomad — interactive Figma prototype',
       hint: 'Tap to try — interactive Figma prototype',

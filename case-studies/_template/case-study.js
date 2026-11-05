@@ -256,6 +256,7 @@
         if (b.fit.background) frame.style.background = b.fit.background;
         fitFrame(frame, iframe, b.fit);
       }
+      if (b.poster || /figma\.com\//.test(b.url)) addPoster(frame, iframe, typeof b.poster === 'string' ? { src: b.poster } : (b.poster || {}));
       wrap.appendChild(frame);
       return wrap;
     },
@@ -282,6 +283,26 @@
     window.addEventListener('resize', scale);
     requestAnimationFrame(scale);
   }
+  // Poster shown over a prototype iframe until it has loaded. Figma fires
+  // `load` before the prototype paints, so the poster stays a moment longer
+  // and then fades out. A fallback timer removes it if `load` never fires.
+  function addPoster(frame, iframe, opts) {
+    const isFigma = /figma\.com\//.test(iframe.src);
+    const cover = el('div', 'cs-poster' + (opts.src ? '' : ' cs-poster--plain'));
+    if (opts.src) {
+      const img = el('img');
+      img.src = opts.src; img.alt = ''; img.decoding = 'async';
+      if (opts.fit) img.style.objectFit = opts.fit;
+      if (opts.background) cover.style.background = opts.background;
+      cover.appendChild(img);
+    }
+    cover.appendChild(el('span', 'cs-poster-label', opts.label || 'Loading prototype…'));
+    frame.appendChild(cover);
+    let done = false;
+    const hide = () => { if (done) return; done = true; cover.classList.add('is-hidden'); setTimeout(() => cover.remove(), 700); };
+    iframe.addEventListener('load', () => setTimeout(hide, isFigma ? 1800 : 150));
+    setTimeout(hide, 15000);
+  }
   // Live app in the hero: hero.app = { url, fit: {width, height}, hint?, buttonLabel?, title? }
   function appStage(a) {
     const st = el('div', 'cs-hero-app');
@@ -295,6 +316,7 @@
     // scale themselves, so they simply fill the frame.
     if (a.fit) fitFrame(frame, iframe, a.fit);
     else frame.classList.add('cs-hero-app-frame--fill');
+    if (a.poster || /figma\.com\//.test(a.url)) addPoster(frame, iframe, typeof a.poster === 'string' ? { src: a.poster } : (a.poster || {}));
     st.appendChild(frame);
     const bar = el('div', 'cs-hero-app-bar');
     bar.appendChild(el('span', 'cs-hero-app-hint', a.hint || 'Tap to try — it’s interactive'));

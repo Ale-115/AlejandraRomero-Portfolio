@@ -304,3 +304,18 @@ a.cs-award:hover { background: var(--purple); transform: translateY(-2px); }
 .cs-callout.tone-outline .cs-callout-label { color: var(--purple); opacity: 1; margin-bottom: 8px; }
 .cs-callout.tone-outline .cs-callout-text { font-size: clamp(1rem, 1.4vw, 1.15rem); font-weight: 600; max-width: 60ch; }
 .cs-hero-app-frame--fill iframe { left: 0; top: 0; width: 100%; height: 100%; transform: none; }
+
+/* Poster / loading cover over embedded prototypes */
+.cs-poster { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center;
+  background: var(--white, #fff); transition: opacity .6s ease; pointer-events: none; }
+.cs-poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.cs-poster.is-hidden { opacity: 0; }
+.cs-poster-label { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue, #002ca7);
+  background: rgba(255,255,255,.85); padding: 6px 12px; border-radius: 99px; white-space: nowrap; }
+.cs-poster-label::before { content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%;
+  background: currentColor; vertical-align: middle; animation: csPulse 1s ease-in-out infinite; }
+.cs-poster--plain { background: var(--light-bg, #f5f3ff); }
+.cs-poster--plain .cs-poster-label { position: static; transform: none; }
+@keyframes csPulse { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .cs-poster { transition: none; } .cs-poster-label::before { animation: none; } }
