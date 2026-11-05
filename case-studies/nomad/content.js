@@ -6,6 +6,8 @@ window.CASE_STUDY = {
   title: 'Nomad',
   status: 'academic',
   nav: true,
+  // Team goes last on this case study.
+  order: ['overview', 'challenge', 'research', 'strategy', 'architecture', 'wireframes', 'ui', 'final', 'outcome', 'role'],
 
   hero: {
     statement: 'An app that helps digital nomads find reliable services, workspaces, communities and purposeful experiences — all in one place.',
@@ -44,16 +46,6 @@ window.CASE_STUDY = {
       blocks: [
         { type: 'callout', tone: 'outline', label: 'Core problem',
           text: 'Planning the next destination — and staying productive once there — takes far more time and effort than it should.' }
-      ]
-    },
-
-    role: {
-      navLabel: 'Team',
-      kicker: 'My role & team',
-      title: 'Three disciplines, one product.',
-      blocks: [
-        { type: 'image', src: 'assets/team', alt: 'Team: Daniela Chaparro (Industrial Designer), Fiorella Medina (Graphic Designer), Alejandra Romero (Advertising Professional)' },
-        { type: 'todo', note: 'Add your specific responsibilities in the team (research, flows, screens, brand) and the decisions you led.' }
       ]
     },
 
@@ -156,6 +148,21 @@ window.CASE_STUDY = {
           heading: 'LCI Education · Certificate of Recognition',
           body: 'Awarded on February 3, 2025 for outstanding performance in the final project of the Innovation in Business Design course — from concept to final presentation.' },
         { type: 'todo', note: 'Add your learnings and next opportunities (features, further testing).' }
+      ]
+    },
+
+    role: {
+      navLabel: 'Team',
+      kicker: 'My role & team',
+      title: 'Three disciplines, one product.',
+      blocks: [
+        { type: 'team',
+          members: [
+            { name: 'Daniela Chaparro', role: 'Industrial Designer' },
+            { name: 'Fiorella Medina', role: 'Graphic Designer' },
+            { name: 'Alejandra Romero', role: 'Advertising Professional', me: true }
+          ] },
+        { type: 'todo', note: 'Add your specific responsibilities in the team (research, flows, screens, brand) and the decisions you led.' }
       ]
     }
   }

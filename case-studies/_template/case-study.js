@@ -404,7 +404,11 @@
     const sections = data.sections || {};
     const tocItems = [];
     let n = 0;
-    SECTION_ORDER.forEach(([id, defaultTitle]) => {
+    // Optional per-case order: data.order = ['overview', 'challenge', ...]
+    const order = Array.isArray(data.order)
+      ? data.order.map((id) => SECTION_ORDER.find(([k]) => k === id) || [id, '']).filter(Boolean)
+      : SECTION_ORDER;
+    order.forEach(([id, defaultTitle]) => {
       const s = sections[id];
       if (!s) return;
       const blocks = (s.blocks || []).map((b) => BLOCKS[b.type] && BLOCKS[b.type](b)).filter(Boolean);
