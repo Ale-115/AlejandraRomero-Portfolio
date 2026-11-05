@@ -33,19 +33,7 @@ window.CASE_STUDY = {
       title: 'Plan the nomad life in one place.',
       intro: 'A startup concept that helps digital nomads decide faster — with one platform and a smart filter for reliable apps, services and places.',
       blocks: [
-        { type: 'stats',
-          items: [
-            { value: '35M', label: 'digital nomads worldwide' },
-            { value: '131%', label: 'growth in US digital nomads, 2019–2023' },
-            { value: '10%', label: 'of digital nomads are Spanish-speaking' }
-          ],
-          source: 'Figures as cited in the original case study (MBO Partners, Demandsage 2024, BBC, Economía UA).' },
-        { type: 'text', heading: 'Goals',
-          list: [
-            'Make it easy to plan transport, work and volunteering at each destination.',
-            'Promote purposeful travel and sustainable tourism.',
-            'Connect nomads so they can share experiences and insights.'
-          ] }
+        { type: 'image', src: 'assets/market-context', alt: 'Digital nomads: 35M worldwide, 131% growth in the U.S. 2019–2023, Spanish speakers are 10% of the global nomad population' }
       ]
     },
 
@@ -64,12 +52,7 @@ window.CASE_STUDY = {
       kicker: 'My role & team',
       title: 'Three disciplines, one product.',
       blocks: [
-        { type: 'team',
-          members: [
-            { name: 'Daniela Chaparro', role: 'Industrial Designer' },
-            { name: 'Fiorella Medina', role: 'Graphic Designer' },
-            { name: 'Alejandra Romero', role: 'Advertising Professional', me: true }
-          ] },
+        { type: 'image', src: 'assets/team', alt: 'Team: Daniela Chaparro (Industrial Designer), Fiorella Medina (Graphic Designer), Alejandra Romero (Advertising Professional)' },
         { type: 'todo', note: 'Add your specific responsibilities in the team (research, flows, screens, brand) and the decisions you led.' }
       ]
     },
@@ -91,19 +74,11 @@ window.CASE_STUDY = {
     },
 
     strategy: {
-      navLabel: 'Decisions',
-      kicker: 'Define',
-      title: 'Six decisions that shape the app.',
+      navLabel: 'Solution',
+      kicker: 'Define the solution',
+      title: 'One platform, five promises.',
       blocks: [
-        { type: 'points',
-          items: [
-            { title: 'Personalized onboarding', text: 'A short questionnaire takes each person to what matters first.' },
-            { title: 'Interactive map with filters', text: 'Stays, coworking, events and communities in one location-based view.' },
-            { title: 'Coworking built around work', text: 'Internet, private rooms, amenities, reviews and routes.' },
-            { title: 'Community, levels and badges', text: 'Rewards for visiting places, posting and joining activities.' },
-            { title: 'Purposeful travel', text: 'Itineraries that combine destinations with impact projects.' },
-            { title: 'NomadPro', text: 'A premium tier for posting, visibility and priority volunteering.' }
-          ] }
+        { type: 'image', src: 'assets/solution', alt: 'Our solution: filters relevant information, personalized recommendations, community integration, sustainable tourism and optimized travel planning' }
       ]
     },
 
