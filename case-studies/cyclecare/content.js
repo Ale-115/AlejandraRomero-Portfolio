@@ -151,12 +151,28 @@ window.CASE_STUDY = {
     },
 
     outcome: {
-      navLabel: 'Outcome',
-      title: 'One concept, from brand to build.',
+      navLabel: 'Reflection',
+      kicker: 'Outcome & reflection',
+      title: 'From research to a working app — faster than I thought possible.',
       intro: 'A working app and a responsive website on a shared design system. It is a concept project — not launched or tested with real users yet.',
       blocks: [
-        { type: 'image', src: 'assets/outcome', alt: 'Outcome and next steps' },
-        { type: 'todo', note: 'Add real learnings after testing.' }
+        { type: 'text', heading: 'What AI changed',
+          body: 'AI made it possible to take this product from zero to a working prototype at a pace that would have been unthinkable a few years ago — without skipping the design thinking in between.',
+          list: [
+            'Research: drafting the surveys, synthesising the answers and turning them into clear findings.',
+            'Structure: moving from findings to flows and wireframes in days, not weeks.',
+            'Illustration: building and scaling the moon-phase illustration system across app, web and brand. The branding itself took its usual time; making the whole illustrated ecosystem work was far easier.',
+            'Build: turning the Figma design into a real, working app prototype.'
+          ] },
+        { type: 'callout', tone: 'outline', label: 'The biggest surprise',
+          text: 'How close the coded app stayed to the Figma design — the fidelity of the final prototype went well beyond what I expected.' },
+        { type: 'text', heading: 'What’s next',
+          body: 'I want to keep iterating on CycleCare and go deeper into women’s health, so the app can become a trusted guide through key stages and conditions:',
+          list: [
+            'Conditions such as endometriosis.',
+            'Life stages such as pregnancy and menopause.',
+            'Sexual health, including sexually transmitted infections.'
+          ] }
       ]
     }
   }
