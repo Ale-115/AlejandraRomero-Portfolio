@@ -279,6 +279,10 @@
 
     <!-- Branding gallery as an infinite, full-width marquee (Nov 2026).
          The previous grid version is kept below in <template class="brand-grid-alt">. -->
+    <div class="brand-marquee-controls">
+      <button class="carousel-btn" type="button" data-marquee-dir="-1" aria-label="Previous brand work"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button class="carousel-btn" type="button" data-marquee-dir="1" aria-label="Next brand work"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
     <div class="brand-marquee" data-marquee aria-label="Selected brand work from All Aboard! Studio">
       <div class="brand-marquee-track">
         <a href="case-studies/all-aboard/all-aboard-studio-case-study.html" class="marquee-item" aria-label="Palma Serena Finca Hotel business card with gold foil logo &mdash; see more at All Aboard! Studio"><img src="assets/gallery/palma-serena-card.webp" alt="Palma Serena Finca Hotel business card with gold foil logo" width="1419" height="736" loading="lazy" /><span class="brand-pic-label">Brand Identity</span></a>
@@ -581,13 +585,52 @@
 
   <script src="ale-anim.js"></script>
   <script>
-  // Branding marquee: set speed from content width and pause on tap (touch).
+  // Branding marquee: slow auto-scroll + arrows. Pauses on hover/focus/tap;
+  // with reduced motion it stays still and only moves with the arrows.
   (function () {
     document.querySelectorAll('[data-marquee]').forEach(function (m) {
       var track = m.querySelector('.brand-marquee-track');
-      function setSpeed() { track.style.setProperty('--marquee-duration', Math.max(45, track.scrollWidth / 2 / 28) + "s"); }
-      setSpeed(); window.addEventListener('load', setSpeed); window.addEventListener('resize', setSpeed);
+      var items = track.children, n = items.length / 2;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var SPEED = 28, x = 0, target = null, period = 0, hover = false, resumeAt = 0, last = performance.now();
+      function measure() { period = items[n].offsetLeft - items[0].offsetLeft; }
+      measure(); window.addEventListener('load', measure); window.addEventListener('resize', measure);
+      m.addEventListener('mouseenter', function () { hover = true; });
+      m.addEventListener('mouseleave', function () { hover = false; });
+      m.addEventListener('focusin', function () { hover = true; });
+      m.addEventListener('focusout', function () { hover = false; });
       m.addEventListener('touchstart', function () { m.classList.toggle('is-paused'); }, { passive: true });
+      function step(dir) {
+        // jump to the next/previous item edge
+        var from = target === null ? x : target, pos = 0, i, best = null;
+        for (i = 0; i < items.length; i++) {
+          pos = items[i].offsetLeft - items[0].offsetLeft;
+          if (dir > 0 && pos > from + 4) { best = pos; break; }
+          if (dir < 0 && pos < from - 4) best = pos;
+        }
+        if (best === null) best = from + dir * 320;
+        target = best; resumeAt = performance.now() + 5000;
+      }
+      document.querySelectorAll('[data-marquee-dir]').forEach(function (b) {
+        b.addEventListener('click', function () { step(+b.getAttribute('data-marquee-dir')); });
+      });
+      function wrap() {
+        if (!period) return;
+        while (x >= period) { x -= period; if (target !== null) target -= period; }
+        while (x < 0) { x += period; if (target !== null) target += period; }
+      }
+      (function loop(now) {
+        var dt = Math.min(0.05, (now - last) / 1000); last = now;
+        if (target !== null) {
+          var d = target - x; x += d * Math.min(1, dt * 7);
+          if (Math.abs(d) < 0.5) { x = target; target = null; }
+        } else if (!reduce && !hover && !m.classList.contains('is-paused') && now > resumeAt) {
+          x += SPEED * dt;
+        }
+        wrap();
+        track.style.transform = 'translate3d(' + (-x) + 'px,0,0)';
+        requestAnimationFrame(loop);
+      })(last);
     });
   })();
   </script>
