@@ -1537,3 +1537,44 @@ a.brand-card:hover > img { transform: scale(1.05); }
 }
 @media (prefers-reduced-motion: reduce) { .brand-pic img { transition: none; } }
 @media (max-width: 600px) { .brand-grid .brand-pic--mob-single { grid-column: span 1; } }
+
+/* ── 04 · BRANDING marquee (full-width, infinite) ── */
+.brand-marquee {
+  position: relative;
+  width: 100vw;
+  margin: 16px 0 0 calc(50% - 50vw);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+.brand-marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: brandMarquee var(--marquee-duration, 60s) linear infinite;
+}
+.brand-marquee:hover .brand-marquee-track,
+.brand-marquee:focus-within .brand-marquee-track,
+.brand-marquee.is-paused .brand-marquee-track { animation-play-state: paused; }
+@keyframes brandMarquee { to { transform: translateX(calc(-50% - 8px)); } }
+.marquee-item {
+  position: relative; flex: none; display: block;
+  height: 320px; border-radius: var(--radius-lg); overflow: hidden; background: var(--lilac);
+}
+.marquee-item img { display: block; height: 100%; width: auto; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.marquee-item:hover img { transform: scale(1.04); }
+.marquee-item:focus-visible { outline: 2px solid var(--purple); outline-offset: -2px; }
+.marquee-item .brand-pic-label { opacity: 0; transform: translateY(6px); transition: opacity .3s ease, transform .3s ease; }
+.marquee-item:hover .brand-pic-label, .marquee-item:focus-visible .brand-pic-label { opacity: 1; transform: none; }
+@media (hover: none) { .marquee-item .brand-pic-label { opacity: 1; transform: none; } }
+@media (max-width: 900px) { .marquee-item { height: 240px; } }
+@media (max-width: 600px) {
+  .marquee-item { height: 200px; }
+  .brand-marquee-track { gap: 12px; }
+  @keyframes brandMarquee { to { transform: translateX(calc(-50% - 6px)); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; padding: 0 16px; }
+  .brand-marquee-track { animation: none; }
+  .brand-marquee-track > [aria-hidden="true"] { display: none; }
+}
