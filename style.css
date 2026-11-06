@@ -1603,5 +1603,9 @@ a.brand-card:hover > img { transform: scale(1.05); }
 
 /* All Aboard! Studio card: brand mark */
 .brand-card--studio { position: relative; }
-.studio-mark { position: absolute; bottom: 82px; right: 24px; width: 110px; height: auto; opacity: .95; pointer-events: none; }
-@media (max-width: 900px) { .studio-mark { width: 60px; bottom: auto; top: 22px; right: 24px; } }
+.studio-mark { display: block; width: 110px; height: auto; margin-top: auto; opacity: .95; pointer-events: none; }
+.brand-card--studio .case-foot { margin-top: 0; padding-top: 6px; }
+@media (max-width: 900px) {
+  .studio-mark { width: 84px; margin-top: 8px; }
+  .brand-grid { grid-template-rows: auto; } /* studio card (first row) grows to fit the mark */
+}
