@@ -1600,3 +1600,8 @@ a.brand-card:hover > img { transform: scale(1.05); }
 .case-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .case-tag--solid { background: var(--blue); border-color: var(--blue); color: var(--white); }
 .tone-blue .case-tag--solid { background: var(--white); color: var(--blue); border-color: var(--white); }
+
+/* All Aboard! Studio card: brand mark */
+.brand-card--studio { position: relative; }
+.studio-mark { position: absolute; bottom: 76px; right: 22px; width: 110px; height: auto; opacity: .95; pointer-events: none; }
+@media (max-width: 900px) { .studio-mark { width: 60px; bottom: auto; top: 16px; right: 18px; } }
