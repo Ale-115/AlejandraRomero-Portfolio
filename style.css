@@ -1341,7 +1341,7 @@ a.case:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; }
 }
 .hero-tag-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .hero-tag--1 { top: 10%; left: -16%; animation-delay: .3s, .9s; }
-.hero-tag--3 { top: 28%; right: -20%; animation-delay: .6s, 1.4s; }
+.hero-tag--3 { top: 28%; right: -4%; animation-delay: .6s, 1.4s; }
 .hero-tag--5 { top: 58%; left: -20%; animation-delay: .9s, 1.9s; }
 .hero-tag--6 { top: 76%; right: -14%; animation-delay: 1.05s, 2.6s; }
 @keyframes tagIn { from { opacity: 0; transform: translateY(10px) scale(.85); } to { opacity: 1; transform: none; } }
