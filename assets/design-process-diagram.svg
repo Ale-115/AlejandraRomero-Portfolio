@@ -1,6 +1,6 @@
 <svg viewBox="0 0 840 610" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Design Process &amp; Decision-Making Flowchart</title>
-  <desc>Five-step process — Discovery &amp; Brief (Notion + Claude for briefs and tasks), Concept &amp; Ideation (Midjourney + ChatGPT for moodboards and direction), Design &amp; Production (Midjourney + Canva AI for identity, content and packaging), Client Review &amp; Revisions, and Delivery &amp; Support (final files plus ongoing Shopify or Wix and social upkeep for select clients) — each with its key decision point. Most AI-accelerated stages: ideation and bilingual copywriting, where Midjourney, ChatGPT and Claude cut the time from brief to first concept, critical when running multiple client accounts at once.</desc>
+  <desc>Five-step process — Discovery &amp; Brief (Notion + Claude for briefs and tasks), Concept &amp; Ideation (ChatGPT + Claude for moodboards and direction), Design &amp; Production (Figma + Claude Design for identity, content and packaging), Client Review &amp; Revisions, and Delivery &amp; Support (final files plus ongoing Shopify or Wix and social upkeep for select clients) — each with its key decision point. Most AI-accelerated stages: ideation and bilingual copywriting, where ChatGPT, Claude and Claude Design cut the time from brief to first concept, critical when running multiple client accounts at once.</desc>
 
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -41,7 +41,7 @@
     <text x="318" y="132" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Explore direction through</text>
     <text x="318" y="148" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">moodboards &amp; references</text>
     <rect x="318" y="158" width="184" height="22" rx="11" fill="#f6c3a8"/>
-    <text x="410" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: Midjourney + ChatGPT</text>
+    <text x="410" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: ChatGPT + Claude</text>
     <text x="318" y="234" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: Which direction fits</text>
     <text x="318" y="250" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">the brand's voice?</text>
   </g>
@@ -54,7 +54,7 @@
     <text x="578" y="132" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">Build identity, content</text>
     <text x="578" y="148" font-family="Arial, sans-serif" font-size="12" fill="#1a1a2e">&amp; packaging assets</text>
     <rect x="578" y="158" width="184" height="22" rx="11" fill="#f6c3a8"/>
-    <text x="670" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: Midjourney + Canva AI</text>
+    <text x="670" y="173" font-family="Arial, sans-serif" font-size="9.5" font-weight="700" fill="#002ca7" text-anchor="middle">AI: Figma + Claude Design</text>
     <text x="578" y="234" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">Q: Consistent across every</text>
     <text x="578" y="250" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#8983ff">touchpoint?</text>
   </g>
@@ -82,7 +82,7 @@
   </g>
 
   <!-- Footer note -->
-  <text x="40" y="580" font-family="Arial, sans-serif" font-size="12" fill="#666">Most AI-accelerated: ideation &amp; bilingual copywriting — Midjourney, ChatGPT and Claude cut the time</text>
+  <text x="40" y="580" font-family="Arial, sans-serif" font-size="12" fill="#666">Most AI-accelerated: ideation &amp; bilingual copywriting — ChatGPT, Claude and Claude Design cut the time</text>
   <text x="40" y="596" font-family="Arial, sans-serif" font-size="12" fill="#666">from brief to first concept, critical when running multiple client accounts at once.</text>
 
 </svg>
