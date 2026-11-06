@@ -1609,3 +1609,11 @@ a.brand-card:hover > img { transform: scale(1.05); }
   .studio-mark { width: 84px; margin-top: 8px; }
   .brand-grid { grid-template-rows: auto; } /* studio card (first row) grows to fit the mark */
 }
+
+/* Experience: "+" button hover in intense purple */
+.xp-acc-item summary:hover .xp-acc-icon,
+.xp-acc-item summary:focus-visible .xp-acc-icon { background: #6b62f5; border-color: #6b62f5; }
+.xp-acc-item summary:hover .xp-acc-icon::before,
+.xp-acc-item summary:hover .xp-acc-icon::after,
+.xp-acc-item summary:focus-visible .xp-acc-icon::before,
+.xp-acc-item summary:focus-visible .xp-acc-icon::after { background: var(--white); }
