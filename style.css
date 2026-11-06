@@ -1595,3 +1595,8 @@ a.brand-card:hover > img { transform: scale(1.05); }
 
 /* All Aboard! page: logo grid under the Brand Identity strip */
 .identities-label { margin: 40px 0 14px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); }
+
+/* Home: two pills on UX/UI cards */
+.case-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.case-tag--solid { background: var(--blue); border-color: var(--blue); color: var(--white); }
+.tone-blue .case-tag--solid { background: var(--white); color: var(--blue); border-color: var(--white); }
